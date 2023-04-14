@@ -1,0 +1,370 @@
+@font-face {
+    font-family: roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+:root {
+    --lightblack: #0b0c17;
+    --red: #ff3571;
+    --gray: #ddd;
+    --blue: #3c30ff;
+    --black: #000;
+    --white: #fff;
+    --space-out: 2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'robotoBold',Arial, Helvetica, sans-serif;
+    margin-bottom: var(--space-out);
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+section, header {
+    min-height: 100vh;
+
+}
+
+section {
+    background-color: var(--white);
+    text-align: center;
+
+}
+
+section > h2, section > p {
+    width: 70%;
+    margin: 0 auto calc(var(--space-out)*2) auto;
+}
+
+.wrapper {
+    margin: 0 calc(var(--space-out)*11);
+}
+
+header {
+    position: relative;
+    margin: 0 0 0 calc(var(--space-out)*2);
+    
+}
+
+nav {
+    padding: calc(var(--space-out)*2);
+    position: relative;
+}
+
+nav h4 {
+    margin-bottom: 0;
+}
+
+nav p {
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
+nav::before {
+    content: url('../img/logo.svg');
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: inline-block;
+    position: fixed;
+    left: 1%;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+header article {
+    max-width: 35%;
+    margin: calc(var(--space-out)*10) 0 0 calc(var(--space-out)*9);
+}
+
+header article p {
+    margin-bottom: calc(var(--space-out)*5);
+}
+header article a {
+    text-decoration: none;
+    color: var(--red);
+    font-size: 1.5rem;
+}
+
+/* header images */
+
+.images {
+    position: absolute;
+    width: 60%;
+    top: 0;
+    right: 0;
+}
+
+.images img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+[class|="container"]  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+[class|="container"] h2 {
+    width: 25%;
+}
+
+[class|="container"] p {
+    width: 80%;
+    padding-left: calc(var(--space-out)*14);
+}
+
+.container-text {
+    min-height: 50vh;
+}
+
+.boxen h2 {
+    width: 55%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: calc(var(--space-out)*6);
+}
+
+.boxen article {
+    display: grid;
+    gap: calc(var(--space-out)*5) calc(var(--space-out)*5);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+}
+
+.boxen article div {
+    margin-left: calc(var(--space-out)*3);
+    margin-bottom: calc(var(--space-out)*3);
+    position: relative;
+}
+
+.boxen article div h4:before {
+    content: url('../img/title03.svg');
+    width: 30px;
+    height: 30px; 
+    display: inline-block;   
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-out)*(-3));
+}
+.boxen article div:nth-of-type(1) h4:before {
+    content: url('../img/title02.svg');
+}
+.boxen article div:nth-of-type(2) h4:before {
+    content: url('../img/title04.svg');
+}
+.boxen article div:nth-of-type(3) h4:before {
+    content: url('../img/title01.svg');
+}
+.boxen article div:nth-of-type(4) h4:before {
+    content: url('../img/title03.svg');
+}
+
+.container-letsgo {
+    display: flex;
+    margin-top: calc(var(--space-out)*2);
+}
+
+.container-letsgo > img {
+    width: 50%;
+    margin-right: calc(var(--space-out)*3);
+}
+.container-letsgo:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.container-letsgo p:first-of-type {
+    padding: 0;
+    color: var(--gray);
+    font-size: 6rem;
+    margin-bottom: calc(var(--space-out)*3);
+}
+.container-letsgo p {
+    padding: 0;
+}
+
+.container-letsgo div img {
+    margin-bottom: var(--space-out);
+}
+
+section:last-of-type {
+    min-height: 50vh;
+}
+
+form {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    text-align: center;
+    padding: var(--space-out);
+    margin-bottom: var(--space-out);
+    font-size: 2rem;
+}
+
+form button {
+    margin: 0 auto;
+    width: 30%;
+    padding: var(--space-out);
+    background-color: var(--red);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+form button:hover, form button:active {
+    background: linear-gradient(to left ,var(--blue), var(--red));
+}
+
+footer {
+    margin: 0 calc(var(--space-out)*11);
+    padding-bottom: var(--space-out);
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+footer img.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.animation-jump {
+    animation: jump 1s infinite alternate;
+    transition: transform 1s;
+}
+
+@keyframes jump {
+    0% {transform: translateY(30px);}
+    100% {transform: translateY(-10px);}
+}
+
+
+@media only screen and (max-width: 768px) {
+    section > h2, section > p {
+        width: 100%;
+        margin: 0 auto;
+    }
+    nav {
+        position: relative;
+        max-width: 100%;
+        z-index: 2;
+        margin: 0 auto;
+    }
+    nav h4 {
+        color: var(--white);
+    }
+    header article {
+        position: relative;
+        max-width: 100%;
+        z-index: 2;
+        margin-left: 0;
+    }
+    .wrapper {
+        margin: 0 calc(var(--space-out)*3);
+    }
+    .images {
+        width: 100%;
+    }
+    .boxen h2 {
+        width: 100%; 
+    }
+    [class|="container"] {
+        flex-direction: column;
+        text-align: left;
+    }
+    [class|="container"] h2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    [class|="container"] p {
+        width: 100%;
+        margin: var(--space-out) auto;
+        padding-left: 0;
+        margin-bottom: calc(var(--space-out)*4);
+    }
+    .boxen article {
+        grid-template-columns: 1fr;
+        gap: calc(var(--space-out)*2);
+    }
+
+    .container-letsgo {
+        position: relative;
+    }
+    .container-letsgo > img {
+        width: 100%; 
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: .5;
+        max-height: 100%;
+    }
+    .container-letsgo div {
+        z-index: 1;
+        min-height: 500px;
+    }
+    form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .wrapper {
+        margin: 0 calc(var(--space-out)*3);
+    }
+}
